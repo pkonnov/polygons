@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  polygon_db:
+    image: kartoza/postgis:latest
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - ./var/pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

@@ -1,0 +1,4 @@
+.pytest_cache/
+docker/var/
+.idea/
+__pycache__/
